@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "CafSolutions",
+        "repositoryURL": "https://github.com/combateafraude/CafSolutions.git",
+        "state": {
+          "branch": null,
+          "revision": "2dee43bae3daefa56c8c199e75c0ad5c5b48228c",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "TensorFlowLiteC",
         "repositoryURL": "https://github.com/combateafraude/TensorFlowLiteC.git",
         "state": {
