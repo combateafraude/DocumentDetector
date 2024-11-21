@@ -42,3 +42,17 @@ jobs:
         run: unzip DocumentDetector.zip -d ./  # Specify where to unzip
       - name: Print content inside folder
         run: ls
+        #Step  4: Push changes to git
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add the extracted files to the git staging area
+          git add DocumentDetector.xcframework  # Add the extracted files
+
+          # Commit the changes
+          git commit -m "Add XCFramework package"
+
+          # Push changes to the repository
+          git push origin feat/cd  # Push to the main branch (adjust as needed)
