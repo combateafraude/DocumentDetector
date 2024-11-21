@@ -1,0 +1,70 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DocumentDetector
+import AdSupport
+import CafSolutions
+import CommonCrypto/*.CC_LONG*/
+import CommonCrypto/*.CC_MD5*/
+import CommonCrypto/*.CC_MD5_DIGEST_LENGTH*/
+import Foundation
+import Security
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum CAFStage : Swift.Int {
+  case dev
+  case beta
+  case prod
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CafSdkType : Swift.String {
+  case native
+  case reactNative
+  case flutter
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CafSDKFailure : Swift.Encodable {
+  public init(errorType: DocumentDetector.CafErrorType?, description: Swift.String?)
+  public let errorType: DocumentDetector.CafErrorType?
+  public let description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum CafErrorType : Swift.String, Swift.Encodable {
+  case unsupportedDevice
+  case cameraPermission
+  case networkException
+  case serverException
+  case tokenException
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class CafDocumentDetectorSDK : ObjectiveC.NSObject {
+  open func helloWorld()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol CafFaceLivenessProvidersProtocol {
+  func startLivenessCheck(parameters: [Swift.String : Any], completion: @escaping ([Swift.String : Any]) -> Swift.Void)
+}
+extension DocumentDetector.CAFStage : Swift.Equatable {}
+extension DocumentDetector.CAFStage : Swift.Hashable {}
+extension DocumentDetector.CAFStage : Swift.RawRepresentable {}
+extension DocumentDetector.CafSdkType : Swift.Equatable {}
+extension DocumentDetector.CafSdkType : Swift.Hashable {}
+extension DocumentDetector.CafSdkType : Swift.RawRepresentable {}
+extension DocumentDetector.CafErrorType : Swift.Equatable {}
+extension DocumentDetector.CafErrorType : Swift.Hashable {}
+extension DocumentDetector.CafErrorType : Swift.RawRepresentable {}
