@@ -3,7 +3,7 @@ name: Download and Push XCFramework from AWS CodeArtifact
 on:
   push:
     tags:
-      -'testdoc-v*'
+      - testdoc-v*
 
 permissions:
     id-token: write   # This is required for requesting the JWT
