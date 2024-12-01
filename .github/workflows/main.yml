@@ -2,6 +2,8 @@ name: Download and Push XCFramework from AWS CodeArtifact
 
 on:
   push:
+    branches:
+      - 'feat/cd'
     tags:
       - testdoc-v*
 
