@@ -3,9 +3,10 @@ Pod::Spec.new do |s|
   s.name             = 'DocumentDetector'
   s.version          = '15.0.2'
   s.summary          = 'DocumentDetector'
+  s.license          = { :type => 'MIT', :file => './LICENSE.txt' }
   s.homepage         = 'https://github.com/combateafraude/iOS'
   s.author           = { 'services@caf.io' => 'services@caf.io' }
-  s.source       = { :git => 'https://github.com/combateafraude/DocumentDetector', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/combateafraude/DocumentDetector.git', :tag => s.version.to_s }
  
   
   s.swift_version = '5.3.2'
