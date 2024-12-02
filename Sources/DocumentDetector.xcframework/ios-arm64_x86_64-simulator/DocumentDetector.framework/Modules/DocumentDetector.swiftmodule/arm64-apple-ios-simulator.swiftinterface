@@ -641,6 +641,7 @@ open class CafMessageSettings : Swift.Encodable {
   open func setManualCaptureMessage(message: Swift.String) -> DocumentDetector.CafMessageSettings
   open func setSensorStabilityMessage(message: Swift.String) -> DocumentDetector.CafMessageSettings
   public func setPopUpDocumentSubtitleMessage(message: Swift.String) -> DocumentDetector.CafMessageSettings
+  public func setholdDocumentMessage(message: Swift.String) -> DocumentDetector.CafMessageSettings
   public func setAiScanDocumentMessage(message: Swift.String) -> DocumentDetector.CafMessageSettings
   public func setAiGetCloserMessage(message: Swift.String) -> DocumentDetector.CafMessageSettings
   public func setAiCentralizeMessage(message: Swift.String) -> DocumentDetector.CafMessageSettings
@@ -815,7 +816,7 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
     open func setStabilitySensorSettings(stabilityThreshold: Swift.Double?) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setProxySettings(proxySettings: DocumentDetector.CafProxySettings?) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func showPreview(_ show: Swift.Bool, title: Swift.String? = nil, subtitle: Swift.String? = nil, confirmLabel: Swift.String? = nil, retryLabel: Swift.String? = nil) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
-    open func setMessageSettings(waitMessage: Swift.String? = nil, fitTheDocumentMessage: Swift.String? = nil, verifyingQualityMessage: Swift.String? = nil, lowQualityDocumentMessage: Swift.String? = nil, uploadingImageMessage: Swift.String? = nil, popupDocumentSubtitleMessage: Swift.String? = nil, unsupportedDocumentMessage: Swift.String? = nil, wrongDocumentMessage: Swift.String? = nil, sensorLuminosityMessage: Swift.String? = nil, sensorOrientationMessage: Swift.String? = nil, sensorStabilityMessage: Swift.String? = nil, predictorScanDocumentMessage: Swift.String? = nil, predictorGetCloserMessage: Swift.String? = nil, predictorCentralizeMessage: Swift.String? = nil, predictorMoveAwayMessage: Swift.String? = nil, predictorAlignDocumentMessage: Swift.String? = nil, predictorTurnDocumentMessage: Swift.String? = nil, predictorCapturedMessage: Swift.String? = nil) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
+    open func setMessageSettings(waitMessage: Swift.String? = nil, fitTheDocumentMessage: Swift.String? = nil, verifyingQualityMessage: Swift.String? = nil, lowQualityDocumentMessage: Swift.String? = nil, uploadingImageMessage: Swift.String? = nil, popupDocumentSubtitleMessage: Swift.String? = nil, unsupportedDocumentMessage: Swift.String? = nil, wrongDocumentMessage: Swift.String? = nil, sensorLuminosityMessage: Swift.String? = nil, sensorOrientationMessage: Swift.String? = nil, sensorStabilityMessage: Swift.String? = nil, holdDocumentMessage: Swift.String? = nil, predictorScanDocumentMessage: Swift.String? = nil, predictorGetCloserMessage: Swift.String? = nil, predictorCentralizeMessage: Swift.String? = nil, predictorMoveAwayMessage: Swift.String? = nil, predictorAlignDocumentMessage: Swift.String? = nil, predictorTurnDocumentMessage: Swift.String? = nil, predictorCapturedMessage: Swift.String? = nil) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setGetImageUrlExpireTime(_ expireTime: Swift.String) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setManualCaptureSettings(enable: Swift.Bool, time: Foundation.TimeInterval) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func enableMultiLanguage(_ enable: Swift.Bool) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
@@ -854,6 +855,8 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
   public var closeButtonSize: CoreFoundation.CGFloat?
   public var closeButtonColor: UIKit.UIColor?
   public var closeButtonContentMode: UIKit.UIView.ContentMode?
+  public var uploadBackGroundColor: UIKit.UIColor
+  public var previewBackGroundColor: UIKit.UIColor
   public var primaryColor: UIKit.UIColor
   public var feedbackColors: DocumentDetector.DocumentFeedbackColors
   public var font: Swift.String?

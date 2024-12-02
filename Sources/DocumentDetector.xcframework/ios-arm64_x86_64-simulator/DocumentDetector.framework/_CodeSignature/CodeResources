@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DvDActmz+kBFapQ/qk3PeF8Eizo=
+		r5B8NRYCr04fozAfGZwzVjU2hl8=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		OInhoH805wG0hgA8RjBFFovFYxY=
+		sg3r7+/4Dz6IrdDL0NGeyQfpIZo=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		OInhoH805wG0hgA8RjBFFovFYxY=
+		sg3r7+/4Dz6IrdDL0NGeyQfpIZo=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XSkS6+VdutGJIAZ3KpACoATP+Kk=
+		toUEoVKoG/aOj3e+R2UlU1gXhdI=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DvDActmz+kBFapQ/qk3PeF8Eizo=
+		r5B8NRYCr04fozAfGZwzVjU2hl8=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		FTUOcS79sfM1qhccAla7SnHv31Y=
+		+xvoBdcfy9SIpw/qSZ7mQDvwjzA=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FTUOcS79sfM1qhccAla7SnHv31Y=
+		+xvoBdcfy9SIpw/qSZ7mQDvwjzA=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		9YfucPOC3F+udqPvwA8er1KzbI4=
+		G8ZS2osvZpUy3ryug0wWEGC+yzQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Preview.storyboardc/h5X-tz-HyN-view-ZgM-rn-lYk.nib</key>
 		<data>
-		jqW0SvJDlpXldJgOvdxxgsJd3Fo=
+		g8x9bsa25bfaUdf2PXCF1YegsLg=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -218,14 +218,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j4au4uoDcq3hOM5Ad6dmA7jgOEEGO9Z3YN5pB3VtylA=
+			u1EV4L2DGs7mdbIgMq68WrPWF0pWeY5Dbqurn1zUR38=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xkMDSU2SmOmAWTmPjEzjsTToVOcxhSXiYpx62D/xKzM=
+			Uxppt0LNH9N9S7zaJCIgMQE/bi2AvelWleB6jwb6xu8=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -239,28 +239,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xkMDSU2SmOmAWTmPjEzjsTToVOcxhSXiYpx62D/xKzM=
+			Uxppt0LNH9N9S7zaJCIgMQE/bi2AvelWleB6jwb6xu8=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PI8M0Z9GKbMQ6DSUKmXWW2kOkLlVPJeh28T3EshCCJc=
+			UJf+4VduaeLsWYpzCj5TXYh7gZqjqAKvhTsO6U+Je8A=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j4au4uoDcq3hOM5Ad6dmA7jgOEEGO9Z3YN5pB3VtylA=
+			u1EV4L2DGs7mdbIgMq68WrPWF0pWeY5Dbqurn1zUR38=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LClaeFrvHL2g7qLOAKevnabgJox8OM+YiUAW0JkIUrk=
+			WeJ8OsRQredGDf0QRbCni/A61HttNtRHogsdBMI+vbc=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -274,14 +274,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LClaeFrvHL2g7qLOAKevnabgJox8OM+YiUAW0JkIUrk=
+			WeJ8OsRQredGDf0QRbCni/A61HttNtRHogsdBMI+vbc=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gkaJdkPyDtpXSGYqgRMa6p6wpU75mSqChbVQQEG3F40=
+			Ogjd0vs/BqjBB9vLslSpsRkfFM3r5yC5HIv78FOux9E=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -330,7 +330,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xs9qS2QREOskj3Kb8LKZXQpW3KUa2pUoTnEUV1bZ5fM=
+			zuOMVwJxtP/P42NShkx/5ZGBVqjDEQdckd7K5kFsj+c=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>

@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		wq1IxJYe3s8NF6d8UAThbBqxBMU=
+		CDQRp5HT6MYi7MhroHA65QVYh30=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		xRhc1IhFwKV+Ayux0XSWLwRAVqE=
+		MalYx8CsN1qW79Tje+Fta+DAjYA=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		xRhc1IhFwKV+Ayux0XSWLwRAVqE=
+		MalYx8CsN1qW79Tje+Fta+DAjYA=
 		</data>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		5K7EVGOYvWFmE1Lz37Q9WV90Ijo=
+		XYr/4obWqcJsRXFjSDHMpuWCIO4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Preview.storyboardc/h5X-tz-HyN-view-ZgM-rn-lYk.nib</key>
 		<data>
-		jqW0SvJDlpXldJgOvdxxgsJd3Fo=
+		g8x9bsa25bfaUdf2PXCF1YegsLg=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -198,14 +198,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rBSOR4dIo2Hs/Lh4C4DD5AyEvJ4YduQ2SiyGO0QNGYc=
+			sFNrTavFDkB3ySf/nmVudnbADvB4TDmfCZrx0KEMUms=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wZNnREZdH792ofrlSJ0n2hij20Spptmquqx01AeeRws=
+			B+3U9qO9eHDo5U5dIj3su+E4tOeRieuIMnv18oqozdE=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -219,14 +219,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wZNnREZdH792ofrlSJ0n2hij20Spptmquqx01AeeRws=
+			B+3U9qO9eHDo5U5dIj3su+E4tOeRieuIMnv18oqozdE=
 			</data>
 		</dict>
 		<key>Modules/DocumentDetector.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cPvvzqueNInLoRojtf/m/7yOZaYqegAxWNPjtXGsxTQ=
+			qJdJSR0Y0s6AtNM1pYtZ2EQKCjlLFnCm4l/kcRTsGZ0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -275,7 +275,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xs9qS2QREOskj3Kb8LKZXQpW3KUa2pUoTnEUV1bZ5fM=
+			zuOMVwJxtP/P42NShkx/5ZGBVqjDEQdckd7K5kFsj+c=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
