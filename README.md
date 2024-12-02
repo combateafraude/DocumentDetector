@@ -7,8 +7,8 @@
 ### Stable
 
 | SDK            | Version |
-| -------------- | ------- |
-| DocumentDetector   | 15.0.1   |
+| -------------- |---------|
+| DocumentDetector   | 15.0.2  |
 
 #### Requirements
 
@@ -35,7 +35,8 @@ To add **DocumentDetector 15.0.1** to your project using **Swift Package Manager
 ```console
 https://github.com/combateafraude/DocumentDetector.git
 ```
-4. Select the version `15.0.1` or choose "Up to Next Major" option to ensure that your project will automatically get future compatible updates.
+
+4. Select the version `15.0.2` or choose "Up to Next Major" option to ensure that your project will automatically get future compatible updates.
 
 5. Complete the steps, and Xcode will automatically integrate the **DocumentDetector** SDK into your project.
 

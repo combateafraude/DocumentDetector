@@ -25,8 +25,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "DocumentDetector",
-            url: "https://github.com/combateafraude/iOS/releases/download/DocumentDetector-15.0.0/DocumentDetector.xcframework.zip",
-            checksum: "b5864f762b50a8e4eab3dfef94740e73590840ad369787a85d8d2208b068f05b"
+            path: "Sources/DocumentDetector.xcframework"
         ),
         .target(
             name: "DocumentDetectorSDK",
