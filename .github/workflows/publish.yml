@@ -1,0 +1,22 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - 'temp/test-cd'
+
+jobs:
+  run-publish:
+    name: Publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bundle install
+        run: |
+          bundle install
+
+      - name: Pod Lib Lint
+        run: |
+          bundle exec fastlane pod_lib_lint
