@@ -8,7 +8,7 @@ end
 platform :ios do
 
     desc "Pod Lib Lint"
-    lane :pod_lib_lint do
+    lane :pod_lint do
         sh "pod lib lint #{podspec} --allow-warnings"
     end
 

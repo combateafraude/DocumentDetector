@@ -3,10 +3,6 @@ name: Publish
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - 'temp/test-cd'
-
 jobs:
   run-publish:
     name: Publish
@@ -28,4 +24,8 @@ jobs:
 
       - name: Pod Lib Lint
         run: |
-          bundle exec fastlane pod_lib_lint
+          bundle exec fastlane pod_lint
+
+      - name: Publish to Cocoapods
+        run: |
+          bundle exec fastlane publish_to_cocoapods
