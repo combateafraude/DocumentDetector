@@ -27,5 +27,7 @@ jobs:
           bundle exec fastlane pod_lint
 
       - name: Publish to Cocoapods
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
           bundle exec fastlane publish_to_cocoapods
