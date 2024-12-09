@@ -5,7 +5,7 @@ on:
     branches:
       - 'feat/cd'
     tags:
-      - testdoc-v*
+      - '*'
 
 permissions:
     id-token: write   # This is required for requesting the JWT
@@ -43,7 +43,7 @@ jobs:
       - name: Check Content inside actual folder
         run: ls
       - name: Unzip Donwloaded Package
-        run: unzip DocumentDetector.zip -d ./  # Specify where to unzip
+        run: unzip -o DocumentDetector.zip -d ./  # Specify where to unzip
       - name: Print content inside folder
         run: ls
         #Step  4: Push changes to git
