@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.source_files = "Sources/DocumentDetector.h"
 
   s.dependency 'TensorFlowLiteC', '2.14.0'
-  s.dependency 'CafSolutions', '2.0.1'
+  s.dependency 'CafSolutions', '2.0.3'
 
 end
