@@ -553,6 +553,85 @@ extension DocumentDetector.DocumentDetectorViewController {
   open func resetAttributesToDefault()
   @objc deinit
 }
+final public class CafConfirmationNextStepContent {
+  final public var title: Swift.String?
+  final public var description: Swift.String?
+  final public var buttonTitle: Swift.String?
+  final public var image: UIKit.UIImage?
+  public init(title: Swift.String? = nil, description: Swift.String? = nil, buttonTitle: Swift.String? = nil, image: UIKit.UIImage? = nil)
+  @objc deinit
+}
+public struct CafInstructionsConfiguration {
+  public var enabled: Swift.Bool
+  public var title: Swift.String?
+  public var descriptionText: Swift.String?
+  public var steps: [Swift.String]?
+  public var buttonTitle: Swift.String?
+  public var headerImage: UIKit.UIImage?
+  public init(enabled: Swift.Bool = true, title: Swift.String? = nil, descriptionText: Swift.String? = nil, steps: [Swift.String]? = nil, buttonTitle: Swift.String? = nil, headerImage: UIKit.UIImage? = nil)
+}
+extension UIKit.UIColor {
+  convenience public init(byHex: Swift.String)
+}
+public struct ColorConfiguration {
+  public let primaryColor: Swift.String?
+  public let secondaryColor: Swift.String?
+  public let contentColor: Swift.String?
+  public let backgroundColor: Swift.String?
+  public let mediumColor: Swift.String?
+  public init(primaryColor: Swift.String? = nil, secondaryColor: Swift.String? = nil, contentColor: Swift.String? = nil, backgroundColor: Swift.String? = nil, mediumColor: Swift.String? = nil)
+}
+public enum CafLogLevel : Swift.String {
+  case debug
+  case usage
+  case info
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CafEnvironment : Swift.Int {
+  case dev
+  case beta
+  case prod
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension DocumentDetector.CafEnvironment {
+  public func toString() -> Swift.String
+}
+public enum CafSdkPlatform : Swift.String {
+  case nativeIos
+  case reactNativeIos
+  case flutterIos
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CafSDKFailure : Swift.Encodable {
+  public init(errorType: DocumentDetector.CafErrorType?, description: Swift.String?)
+  public let errorType: DocumentDetector.CafErrorType?
+  public let description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum CafErrorType : Swift.String, Swift.Encodable {
+  case unsupportedDevice
+  case cameraPermission
+  case networkException
+  case serverException
+  case tokenException
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @objc @_Concurrency.MainActor @preconcurrency public class UploadValidationViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency convenience public init(documentDetector: DocumentDetector.DocumentDetectorSdk)
   @_Concurrency.MainActor @preconcurrency public init(documentDetector: DocumentDetector.DocumentDetectorSdk, nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -864,77 +943,6 @@ public class CafImageUploadResponseBody : Swift.Encodable {
   public var code: Swift.Int!
   @objc deinit
 }
-public struct CafInstructionsConfiguration {
-  public var enabled: Swift.Bool
-  public var title: Swift.String?
-  public var descriptionText: Swift.String?
-  public var steps: [Swift.String]?
-  public var buttonTitle: Swift.String?
-  public var headerImage: UIKit.UIImage?
-  public init(enabled: Swift.Bool = true, title: Swift.String? = nil, descriptionText: Swift.String? = nil, steps: [Swift.String]? = nil, buttonTitle: Swift.String? = nil, headerImage: UIKit.UIImage? = nil)
-}
-public enum CafLogLevel : Swift.String {
-  case debug
-  case usage
-  case info
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum CafEnvironment : Swift.Int {
-  case dev
-  case beta
-  case prod
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension DocumentDetector.CafEnvironment {
-  public func toString() -> Swift.String
-}
-public enum CafSdkPlatform : Swift.String {
-  case nativeIos
-  case reactNativeIos
-  case flutterIos
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct CafSDKFailure : Swift.Encodable {
-  public init(errorType: DocumentDetector.CafErrorType?, description: Swift.String?)
-  public let errorType: DocumentDetector.CafErrorType?
-  public let description: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public enum CafErrorType : Swift.String, Swift.Encodable {
-  case unsupportedDevice
-  case cameraPermission
-  case networkException
-  case serverException
-  case tokenException
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct ColorConfiguration {
-  public let primaryColor: Swift.String?
-  public let secondaryColor: Swift.String?
-  public let contentColor: Swift.String?
-  public let backgroundColor: Swift.String?
-  public let mediumColor: Swift.String?
-  public init(primaryColor: Swift.String? = nil, secondaryColor: Swift.String? = nil, contentColor: Swift.String? = nil, backgroundColor: Swift.String? = nil, mediumColor: Swift.String? = nil)
-}
-extension UIKit.UIColor {
-  convenience public init(byHex: Swift.String)
-}
 @_hasMissingDesignatedInitializers final public class Interpreter {
   final public let options: DocumentDetector.Interpreter.Options?
   final public let delegates: [any DocumentDetector.Delegate]?
@@ -1053,12 +1061,6 @@ extension DocumentDetector.DDCAFStage : Swift.RawRepresentable {}
 extension DocumentDetector.CafResolution : Swift.Equatable {}
 extension DocumentDetector.CafResolution : Swift.Hashable {}
 extension DocumentDetector.CafResolution : Swift.RawRepresentable {}
-extension DocumentDetector.CafFileFormat : Swift.Equatable {}
-extension DocumentDetector.CafFileFormat : Swift.Hashable {}
-extension DocumentDetector.CafFileFormat : Swift.RawRepresentable {}
-extension DocumentDetector.CafMask : Swift.Equatable {}
-extension DocumentDetector.CafMask : Swift.Hashable {}
-extension DocumentDetector.CafMask : Swift.RawRepresentable {}
 extension DocumentDetector.CafLogLevel : Swift.Equatable {}
 extension DocumentDetector.CafLogLevel : Swift.Hashable {}
 extension DocumentDetector.CafLogLevel : Swift.RawRepresentable {}
@@ -1071,6 +1073,12 @@ extension DocumentDetector.CafSdkPlatform : Swift.RawRepresentable {}
 extension DocumentDetector.CafErrorType : Swift.Equatable {}
 extension DocumentDetector.CafErrorType : Swift.Hashable {}
 extension DocumentDetector.CafErrorType : Swift.RawRepresentable {}
+extension DocumentDetector.CafFileFormat : Swift.Equatable {}
+extension DocumentDetector.CafFileFormat : Swift.Hashable {}
+extension DocumentDetector.CafFileFormat : Swift.RawRepresentable {}
+extension DocumentDetector.CafMask : Swift.Equatable {}
+extension DocumentDetector.CafMask : Swift.Hashable {}
+extension DocumentDetector.CafMask : Swift.RawRepresentable {}
 extension DocumentDetector.CafDocumentType : Swift.Equatable {}
 extension DocumentDetector.CafDocumentType : Swift.Hashable {}
 extension DocumentDetector.CafDocumentType : Swift.RawRepresentable {}
