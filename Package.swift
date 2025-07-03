@@ -19,7 +19,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/combateafraude/CafSolutions.git",
-            .exact("2.0.3")
+            .exact("2.0.5")
         )
     ],
     targets: [
