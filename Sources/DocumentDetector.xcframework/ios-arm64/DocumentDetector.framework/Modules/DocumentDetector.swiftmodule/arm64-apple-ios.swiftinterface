@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DocumentDetector
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
@@ -34,8 +34,164 @@ import VideoToolbox
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+final public class CafConfirmationNextStepContent {
+  final public var title: Swift.String?
+  final public var description: Swift.String?
+  final public var buttonTitle: Swift.String?
+  final public var image: UIKit.UIImage?
+  public init(title: Swift.String? = nil, description: Swift.String? = nil, buttonTitle: Swift.String? = nil, image: UIKit.UIImage? = nil)
+  @objc deinit
+}
+public struct CafInstructionsConfiguration {
+  public var enabled: Swift.Bool
+  public var title: Swift.String?
+  public var descriptionText: Swift.String?
+  public var steps: [Swift.String]?
+  public var buttonTitle: Swift.String?
+  public var headerImage: UIKit.UIImage?
+  public init(enabled: Swift.Bool = true, title: Swift.String? = nil, descriptionText: Swift.String? = nil, steps: [Swift.String]? = nil, buttonTitle: Swift.String? = nil, headerImage: UIKit.UIImage? = nil)
+}
+extension UIKit.UIColor {
+  convenience public init(byHex: Swift.String)
+}
+public enum CafEnvironment : Swift.Int {
+  case dev
+  case beta
+  case prod
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension DocumentDetector.CafEnvironment {
+  public func toString() -> Swift.String
+}
+public enum CafSdkPlatform : Swift.String {
+  case nativeIos
+  case reactNativeIos
+  case flutterIos
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CafSDKError : Swift.Encodable {
+  public init(errorType: DocumentDetector.CafErrorType, description: Swift.String?)
+  public let errorType: DocumentDetector.CafErrorType
+  public let description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct CafSDKFailure : Swift.Encodable {
+  public init(signedResponse: Swift.String?, failureReason: DocumentDetector.CafFailureType, description: Swift.String?)
+  public let signedResponse: Swift.String?
+  public let failureReason: DocumentDetector.CafFailureType
+  public let description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum CafErrorType : Swift.String, Swift.Encodable, Swift.CaseIterable {
+  case unsupportedDevice
+  case cameraPermission
+  case networkException
+  case serverException
+  case tokenException
+  case captureAlreadyActiveException
+  case unexpectedErrorException
+  case userTimeoutException
+  case imageNotFoundException
+  case tooManyRequestsException
+  case unknownException
+  case libraryException
+  case permissionException
+  case invalidResponseException
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [DocumentDetector.CafErrorType]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [DocumentDetector.CafErrorType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CafFailureType : Swift.String, Swift.Encodable, Swift.CaseIterable {
+  case unknown
+  case tooMuchMovement
+  case tooBright
+  case tooDark
+  case misalignedFace
+  case eyesClosed
+  case faceTooFar
+  case faceTooClose
+  case sunglasses
+  case obscuredFace
+  case multipleFaces
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [DocumentDetector.CafFailureType]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [DocumentDetector.CafFailureType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ColorConfiguration {
+  public let primaryColor: Swift.String?
+  public let secondaryColor: Swift.String?
+  public let contentColor: Swift.String?
+  public let backgroundColor: Swift.String?
+  public let mediumColor: Swift.String?
+  public init(primaryColor: Swift.String? = nil, secondaryColor: Swift.String? = nil, contentColor: Swift.String? = nil, backgroundColor: Swift.String? = nil, mediumColor: Swift.String? = nil)
+}
+public protocol DDCustomization {
+}
+final public class DDUploadCustomization : DocumentDetector.DDCustomization {
+  final public var image: UIKit.UIImage?
+  final public var message: Swift.String?
+  final public var uploadButton: Swift.String?
+  final public var cancelButton: Swift.String?
+  public init(image: UIKit.UIImage? = nil, message: Swift.String? = nil, uploadButton: Swift.String? = nil, cancelButton: Swift.String? = nil)
+  @objc deinit
+}
+final public class DDPreviewCustomization : DocumentDetector.DDCustomization {
+  final public var title: Swift.String?
+  final public var message: Swift.String?
+  final public var okButton: Swift.String?
+  final public var tryAgainButton: Swift.String?
+  public init(title: Swift.String? = nil, message: Swift.String? = nil, okButton: Swift.String? = nil, tryAgainButton: Swift.String? = nil)
+  @objc deinit
+}
+final public class DDUploadMessagesCustomization : DocumentDetector.DDCustomization {
+  final public var sending: Swift.String?
+  final public var verifyingIntegrity: Swift.String?
+  final public var processingData: Swift.String?
+  final public var almostDone: Swift.String?
+  final public var timeBetweenMessages: Foundation.TimeInterval?
+  public init(sending: Swift.String? = nil, verifyingIntegrity: Swift.String? = nil, processingData: Swift.String? = nil, almostDone: Swift.String? = nil, timeBetweenMessages: Foundation.TimeInterval? = nil)
+  @objc deinit
+}
+final public class DDFailedPhotoCustomization : DocumentDetector.DDCustomization {
+  final public var title: Swift.String?
+  final public var description: Swift.String?
+  final public var continueButton: Swift.String?
+  public init(title: Swift.String? = nil, description: Swift.String? = nil, continueButton: Swift.String? = nil)
+  @objc deinit
+}
+public enum CafLogLevel : Swift.String {
+  case debug
+  case usage
+  case info
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CafDocumentDetectorFailure : ObjectiveC.NSObject, Swift.Encodable {
   public var message: Swift.String!
+  public var type: DocumentDetector.CafErrorType
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
@@ -448,6 +604,7 @@ public struct QuantizationParameters : Swift.Equatable, Swift.Hashable {
   public var type: Swift.String!
   public var captures: [DocumentDetector.CafCapture]!
   public var trackingId: Swift.String?
+  public var signedResponse: Swift.String?
   public static let LENS_FACING_FRONT: Swift.Int
   public static let LENS_FACING_BACK: Swift.Int
   @objc override dynamic public init()
@@ -548,89 +705,11 @@ extension DocumentDetector.DocumentDetectorViewController {
   public var stepLabel: Swift.String!
   public var illustration: UIKit.UIImage!
   public var showStepLabel: Swift.Bool
-  public init(document: DocumentDetector.CafDocument, stepLabel: Swift.String? = nil, illustration: UIKit.UIImage? = nil, showStepLabel: Swift.Bool = true)
+  public var message: Swift.String?
+  public var okButtonTitle: Swift.String?
+  public init(document: DocumentDetector.CafDocument, stepLabel: Swift.String? = nil, illustration: UIKit.UIImage? = nil, message: Swift.String? = nil, okButtonTitle: Swift.String? = nil, showStepLabel: Swift.Bool = true)
   public func encode(to encoder: any Swift.Encoder) throws
-  open func resetAttributesToDefault()
   @objc deinit
-}
-final public class CafConfirmationNextStepContent {
-  final public var title: Swift.String?
-  final public var description: Swift.String?
-  final public var buttonTitle: Swift.String?
-  final public var image: UIKit.UIImage?
-  public init(title: Swift.String? = nil, description: Swift.String? = nil, buttonTitle: Swift.String? = nil, image: UIKit.UIImage? = nil)
-  @objc deinit
-}
-public struct CafInstructionsConfiguration {
-  public var enabled: Swift.Bool
-  public var title: Swift.String?
-  public var descriptionText: Swift.String?
-  public var steps: [Swift.String]?
-  public var buttonTitle: Swift.String?
-  public var headerImage: UIKit.UIImage?
-  public init(enabled: Swift.Bool = true, title: Swift.String? = nil, descriptionText: Swift.String? = nil, steps: [Swift.String]? = nil, buttonTitle: Swift.String? = nil, headerImage: UIKit.UIImage? = nil)
-}
-extension UIKit.UIColor {
-  convenience public init(byHex: Swift.String)
-}
-public struct ColorConfiguration {
-  public let primaryColor: Swift.String?
-  public let secondaryColor: Swift.String?
-  public let contentColor: Swift.String?
-  public let backgroundColor: Swift.String?
-  public let mediumColor: Swift.String?
-  public init(primaryColor: Swift.String? = nil, secondaryColor: Swift.String? = nil, contentColor: Swift.String? = nil, backgroundColor: Swift.String? = nil, mediumColor: Swift.String? = nil)
-}
-public enum CafLogLevel : Swift.String {
-  case debug
-  case usage
-  case info
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum CafEnvironment : Swift.Int {
-  case dev
-  case beta
-  case prod
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension DocumentDetector.CafEnvironment {
-  public func toString() -> Swift.String
-}
-public enum CafSdkPlatform : Swift.String {
-  case nativeIos
-  case reactNativeIos
-  case flutterIos
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct CafSDKFailure : Swift.Encodable {
-  public init(errorType: DocumentDetector.CafErrorType?, description: Swift.String?)
-  public let errorType: DocumentDetector.CafErrorType?
-  public let description: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public enum CafErrorType : Swift.String, Swift.Encodable {
-  case unsupportedDevice
-  case cameraPermission
-  case networkException
-  case serverException
-  case tokenException
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
 }
 @objc @_Concurrency.MainActor @preconcurrency public class UploadValidationViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency convenience public init(documentDetector: DocumentDetector.DocumentDetectorSdk)
@@ -770,29 +849,6 @@ extension DocumentDetector.Tensor.Shape : Swift.ExpressibleByArrayLiteral {
   public init(arrayLiteral: Swift.Int...)
   public typealias ArrayLiteralElement = Swift.Int
 }
-public class CafUploadValidationMessage {
-  public init(image: UIKit.UIImage? = nil, title: Swift.String, message: Swift.String = "", allowanceButtonTitle: Swift.String)
-  @objc deinit
-}
-extension DocumentDetector.CafUploadValidationMessage {
-  public static let allowPermissionMessage: DocumentDetector.CafUploadValidationMessage
-  public static let deniedPermissionMessage: DocumentDetector.CafUploadValidationMessage
-  public static let sendingPhotoMessage: DocumentDetector.CafUploadValidationMessage
-  public static let completeSendingMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidFormatErrorMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidSizeErrorMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidDocumentErrorMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidFrontDocumentErrorWhenRequestedBackMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidFrontDocumentErrorWhenRequestedFullMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidBackDocumentErrorWhenRequestedFrontMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidBackDocumentErrorWhenRequestedFullMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidFullDocumentErrorWhenRequestedFrontMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidFullDocumentErrorWhenRequestedBackMessage: DocumentDetector.CafUploadValidationMessage
-  public static let invalidQualityErrorMessage: DocumentDetector.CafUploadValidationMessage
-}
-extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
-  public static func == (lhs: DocumentDetector.CafUploadValidationMessage, rhs: DocumentDetector.CafUploadValidationMessage) -> Swift.Bool
-}
 @objc public enum CafMask : Swift.Int {
   case normal
   case success
@@ -820,7 +876,8 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @objc open class DocumentDetectorSdk : ObjectiveC.NSObject, Swift.Encodable {
+@_hasMissingDesignatedInitializers @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
+@objc open class DocumentDetectorSdk : ObjectiveC.NSObject, Swift.Encodable {
   public var mobileToken: Swift.String!
   public var personId: Swift.String?
   public var useAnalytics: Swift.Bool!
@@ -836,10 +893,6 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
   public var luminosityThreshold: Swift.Float!
   public var proxySettings: DocumentDetector.DDProxySettings?
   public var previewShow: Swift.Bool!
-  public var previewTitle: Swift.String!
-  public var previewSubtitle: Swift.String!
-  public var previewConfirmLabel: Swift.String!
-  public var previewRetryLabel: Swift.String!
   public var messageSettings: DocumentDetector.DDMessageSettings!
   public var getUrlExpireTime: Swift.String!
   public var enableManualCapture: Swift.Bool!
@@ -859,7 +912,10 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
     get
     set
   }
+  public var customStrings: [any DocumentDetector.DDCustomization]?
+  public var entrypoint: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
+  @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
   @objc open class CafBuilder : ObjectiveC.NSObject {
     public init(mobileToken: Swift.String, enableMultiLanguage: Swift.Bool = true)
     open func setAllowedPassportList(passportList: [DocumentDetector.DDCountryCodes]?) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
@@ -875,7 +931,7 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
     open func setOrientationSensorSettings(orientationThreshold: Swift.Double?) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setStabilitySensorSettings(stabilityThreshold: Swift.Double?) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setProxySettings(proxySettings: DocumentDetector.DDProxySettings?) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
-    open func showPreview(_ show: Swift.Bool, title: Swift.String? = nil, subtitle: Swift.String? = nil, confirmLabel: Swift.String? = nil, retryLabel: Swift.String? = nil) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
+    open func showPreview(_ show: Swift.Bool) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setMessageSettings(waitMessage: Swift.String? = nil, fitTheDocumentMessage: Swift.String? = nil, verifyingQualityMessage: Swift.String? = nil, lowQualityDocumentMessage: Swift.String? = nil, uploadingImageMessage: Swift.String? = nil, popupDocumentSubtitleMessage: Swift.String? = nil, unsupportedDocumentMessage: Swift.String? = nil, wrongDocumentMessage: Swift.String? = nil, sensorLuminosityMessage: Swift.String? = nil, sensorOrientationMessage: Swift.String? = nil, sensorStabilityMessage: Swift.String? = nil, holdDocumentMessage: Swift.String? = nil, predictorScanDocumentMessage: Swift.String? = nil, predictorGetCloserMessage: Swift.String? = nil, predictorCentralizeMessage: Swift.String? = nil, predictorMoveAwayMessage: Swift.String? = nil, predictorAlignDocumentMessage: Swift.String? = nil, predictorTurnDocumentMessage: Swift.String? = nil, predictorCapturedMessage: Swift.String? = nil) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setGetImageUrlExpireTime(_ expireTime: Swift.String) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setManualCaptureSettings(enable: Swift.Bool, time: Foundation.TimeInterval) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
@@ -885,7 +941,10 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
     open func setUploadSettings(uploadSettings: DocumentDetector.DDUploadSettings) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setSelectDocumentConfig(title: Swift.String? = nil, description: Swift.String? = nil) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
     open func setStage(stage: DocumentDetector.DDCAFStage) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
-    open func build() -> DocumentDetector.DocumentDetectorSdk
+    open func setCustomStrings(customStrings: [any DocumentDetector.DDCustomization]) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
+    open func setSdkType(type: Swift.String) -> DocumentDetector.DocumentDetectorSdk.CafBuilder
+    @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
+    open func build(entrypoint: Swift.String? = nil) -> DocumentDetector.DocumentDetectorSdk
     @objc deinit
   }
   @objc deinit
@@ -914,9 +973,6 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
   public var closeButtonSize: CoreFoundation.CGFloat?
   public var closeButtonColor: UIKit.UIColor?
   public var closeButtonContentMode: UIKit.UIView.ContentMode?
-  public var uploadBackGroundColor: UIKit.UIColor
-  public var previewBackGroundColor: UIKit.UIColor
-  public var primaryColor: UIKit.UIColor
   public var feedbackColors: DocumentDetector.DocumentFeedbackColors
   public var font: Swift.String?
   @objc override dynamic public init()
@@ -925,7 +981,6 @@ extension DocumentDetector.CafUploadValidationMessage : Swift.Equatable {
   open func setCloseButtonColor(color: UIKit.UIColor)
   open func setCloseButtonImageImage(image: UIKit.UIImage)
   open func setCloseButtonContentMode(mode: UIKit.UIView.ContentMode)
-  open func setPrimaryColor(color: UIKit.UIColor)
   open func setFeedbackColors(colors: DocumentDetector.DocumentFeedbackColors)
   @objc deinit
 }
@@ -1049,6 +1104,21 @@ extension DocumentDetector.SignatureRunnerError : Swift.CustomStringConvertible 
     get
   }
 }
+extension DocumentDetector.CafEnvironment : Swift.Equatable {}
+extension DocumentDetector.CafEnvironment : Swift.Hashable {}
+extension DocumentDetector.CafEnvironment : Swift.RawRepresentable {}
+extension DocumentDetector.CafSdkPlatform : Swift.Equatable {}
+extension DocumentDetector.CafSdkPlatform : Swift.Hashable {}
+extension DocumentDetector.CafSdkPlatform : Swift.RawRepresentable {}
+extension DocumentDetector.CafErrorType : Swift.Equatable {}
+extension DocumentDetector.CafErrorType : Swift.Hashable {}
+extension DocumentDetector.CafErrorType : Swift.RawRepresentable {}
+extension DocumentDetector.CafFailureType : Swift.Equatable {}
+extension DocumentDetector.CafFailureType : Swift.Hashable {}
+extension DocumentDetector.CafFailureType : Swift.RawRepresentable {}
+extension DocumentDetector.CafLogLevel : Swift.Equatable {}
+extension DocumentDetector.CafLogLevel : Swift.Hashable {}
+extension DocumentDetector.CafLogLevel : Swift.RawRepresentable {}
 extension DocumentDetector.CafCaptureMode : Swift.Equatable {}
 extension DocumentDetector.CafCaptureMode : Swift.Hashable {}
 extension DocumentDetector.CafCaptureMode : Swift.RawRepresentable {}
@@ -1061,18 +1131,6 @@ extension DocumentDetector.DDCAFStage : Swift.RawRepresentable {}
 extension DocumentDetector.CafResolution : Swift.Equatable {}
 extension DocumentDetector.CafResolution : Swift.Hashable {}
 extension DocumentDetector.CafResolution : Swift.RawRepresentable {}
-extension DocumentDetector.CafLogLevel : Swift.Equatable {}
-extension DocumentDetector.CafLogLevel : Swift.Hashable {}
-extension DocumentDetector.CafLogLevel : Swift.RawRepresentable {}
-extension DocumentDetector.CafEnvironment : Swift.Equatable {}
-extension DocumentDetector.CafEnvironment : Swift.Hashable {}
-extension DocumentDetector.CafEnvironment : Swift.RawRepresentable {}
-extension DocumentDetector.CafSdkPlatform : Swift.Equatable {}
-extension DocumentDetector.CafSdkPlatform : Swift.Hashable {}
-extension DocumentDetector.CafSdkPlatform : Swift.RawRepresentable {}
-extension DocumentDetector.CafErrorType : Swift.Equatable {}
-extension DocumentDetector.CafErrorType : Swift.Hashable {}
-extension DocumentDetector.CafErrorType : Swift.RawRepresentable {}
 extension DocumentDetector.CafFileFormat : Swift.Equatable {}
 extension DocumentDetector.CafFileFormat : Swift.Hashable {}
 extension DocumentDetector.CafFileFormat : Swift.RawRepresentable {}
