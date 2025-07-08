@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'DocumentDetector'
-  s.version = '16.4.0'
+  s.version = '16.4.1'
   s.summary          = 'DocumentDetector'
   s.license          = { :type => 'MIT', :file => './LICENSE.txt' }
   s.homepage         = 'https://github.com/combateafraude/iOS'
